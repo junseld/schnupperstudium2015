@@ -19,6 +19,12 @@
 
 	<!-- Main JavaScript file -->
 	<script>
+		$(document).ready(function(){
+			var ifr=document.getElementById('mainiframe');
+			 ifr.onload=function(){
+			     iframeLoaded();
+			 };			 
+		})
 		$(function() {
 
 			var socket = io();
@@ -29,9 +35,19 @@
 			});
 
 		});
+
+		function iframeLoaded() {
+	      var iFrameID = document.getElementById('mainiframe');
+	      if(iFrameID) {
+	            // here you can make the height, I delete it first, then I make it again
+	            iFrameID.height = "";
+	            iFrameID.height = iFrameID.contentWindow.document.body.scrollHeight + "px";
+	      }   
+  		}
 	</script>
 
-	<iframe id="mainiframe" width="100%" height="2500px" src="jack/index.html" style="border: none"/>
+	<iframe id="mainiframe" width="100%" height="800px" src="zuckerberg/index.html" style="border: none"/>
+
 
 </body>
 </html>
