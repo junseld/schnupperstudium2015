@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Schnupperstudium</title>
+
+</head>
+
+<body>
+
+	<!-- Including the JS libraries that we use -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+	<!-- Socket.io library -->
+	<script src="/socket.io/socket.io.js"></script>
+
+	<!-- Main JavaScript file -->
+	<script>
+		$(function() {
+
+			var socket = io();
+			socket.emit('load', {
+				key: 'test'
+			});
+
+			socket.on('change_site', function(data){
+				console.dir(data)
+				document.getElementById('mainiframe').src = data.path;
+			});
+
+		});
+	</script>
+
+	<iframe id="mainiframe" src="jack/index.html" style="border: none"/>
+
+</body>
+</html>

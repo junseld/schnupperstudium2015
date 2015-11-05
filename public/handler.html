@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Schnupperstudium</title>
+
+</head>
+
+<body>
+
+	<button onclick="change_site('jack')">Jack</button>
+	<button onclick="change_site('andrei')">Andrei</button>
+	<button onclick="change_site('jack')">Jack</button>
+
+
+	<!-- Including the JS libraries that we use -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+	<script>
+			function change_site(name) {
+				$.get("/change-site", {name: name}, function(){
+						console.log("Change site to " + name);
+					});
+			}
+	</script>
+
+</body>
+</html>
