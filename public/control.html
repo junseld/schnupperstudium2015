@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>Bootstrap Theme Simply Me</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <style>
+  .bg-1 { 
+      background-color: red;
+      color: #ffffff;
+  }
+  .bg-2 { 
+      background-color: black;
+      color: #ffffff;
+  }
+  .bg-3 { 
+      background-color: #ffffff;
+      color: #555555;
+  }
+    .bg-4 { 
+      background-color: #ffffff;
+      color: #555555;
+  }
+    .bg-5 { 
+      background-color: #ffffff;
+      color: #555555;
+  }
+    .bg-6 { 
+      background-color: #ffffff;
+      color: #555555;
+  }
+    .bg-7 { 
+      background-color: #ffffff;
+      color: #555555;
+  }
+    .bg-8 { 
+      background-color: #ffffff;
+      color: #555555;
+  }
+    .bg-9 { 
+      background-color: #ffffff;
+      color: #555555;
+  }
+  .container-fluid {
+      padding-top: 70px;
+      padding-bottom: 70px;
+  }
+
+    #mypage_section{
+        background-color: #F06292;
+        color: white;
+    }
+
+    img{
+      width: 30%;
+    }
+
+    img:hover{
+      cursor: pointer;
+    }
+
+    h3{
+      font-size: 4vw;
+    }
+
+  </style>
+</head>
+<body>
+
+<div class="container-fluid bg-1 text-center">
+  <h3>Zucky Monkey</h3>
+    <img id="zuckerberg" src="img/persona.png" class="img-circle" alt="Bird" onclick="change_site('zuckerberg')">
+  <h3>Check my website out!</h3>
+</div>
+
+<div class="container-fluid bg-2 text-center">
+  <h3>Janet</h3>
+    <img src="img/persona.png" class="img-circle" alt="Bird" onclick="change_site('leon')">
+  <h3>Check my website out!</h3>
+</div>
+
+<!-- Including the JS libraries that we use -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+  <script>
+      function change_site(name) {
+        $.get("/change-site", {name: name}, function(){
+            console.log("Change site to " + name);
+          });
+      }
+  </script>
+
+</body>
+</html>

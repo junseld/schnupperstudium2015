@@ -1,0 +1,10 @@
+@font-face {
+    font-family: ComicSansMS;
+    src: url(fonts/comic.ttf);
+}
+
+h8 {
+	font-family: ComicSansMS;
+	font-size: 3vw;
+	text-align: center;
+}

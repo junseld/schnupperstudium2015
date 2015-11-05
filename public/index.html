@@ -22,10 +22,7 @@
 		$(function() {
 
 			var socket = io();
-			socket.emit('load', {
-				key: 'test'
-			});
-
+			
 			socket.on('change_site', function(data){
 				console.dir(data)
 				document.getElementById('mainiframe').src = data.path;
@@ -34,7 +31,7 @@
 		});
 	</script>
 
-	<iframe id="mainiframe" src="jack/index.html" style="border: none"/>
+	<iframe id="mainiframe" width="100%" height="2500px" src="jack/index.html" style="border: none"/>
 
 </body>
 </html>

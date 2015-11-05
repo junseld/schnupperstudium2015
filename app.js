@@ -13,9 +13,6 @@ var presentation = io.on('connection', function (socket) {
 	console.log("New socket: "+socket)
 	// A new client has come online. Check the secret key and 
 	// emit a "granted" or "denied" message.
-	socket.on('load', function(data){
-		console.log(data)
-	})
 });
 
 app.get("/change-site", function(req,res){
