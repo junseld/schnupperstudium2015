@@ -5,6 +5,34 @@
 
 h8 {
 	font-family: ComicSansMS;
-	font-size: 3vw;
+	font-size: 4vw;
 	text-align: center;
+}
+
+h9 {
+	font-family: ComicSansMS;
+	font-size: 3.8vw;
+	text-align: left;
+	color: red;
+}
+
+h10 {
+	font-family: ComicSansMS;
+	font-size: 3.8vw;
+	text-align: left;
+	color: blue;
+}
+
+h11 {
+	font-family: ComicSansMS;
+	font-size: 3.8vw;
+	text-align: left;
+	color: green;
+}
+
+h12 {
+	font-family: ComicSansMS;
+	font-size: 3.8vw;
+	text-align: left;
+	color: yellow;
 }
